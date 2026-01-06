@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: data-saver-service
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: LOGIN
+        sync: false
+      - key: PASSWORD
+        sync: false
