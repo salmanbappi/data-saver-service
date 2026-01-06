@@ -6,7 +6,7 @@ const compress = require('./compress')
 const bypass = require('./bypass')
 const copyHeaders = require('./copyHeaders')
 
-function proxy(req, res) {
+function handler(req, res) {
   request.get(
     req.params.url,
     {
@@ -40,4 +40,4 @@ function proxy(req, res) {
   )
 }
 
-module.exports = proxy
+module.exports = handler
